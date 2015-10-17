@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="webApp" ng-controller="pageController as pc">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- CSS Files -->
+    <!-- Bootstrap CSS files -->
+    <link href="../tp/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../tp/bootstrap-3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Local CSS files -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <title>{{title}}</title>
+</head>
+<body role="document">
+
+<!-- ========================== -->
+<!-- Fixed navbar -->
+<!-- ========================== -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span ng-show="isCompanyNameHighlight">
+                <a class="navbar-brand" href="{{companyMainPageLink}}" style="color:#ffffff">{{companyName}}</a>
+            </span>
+            <span ng-show="!isCompanyNameHighlight">
+                <a class="navbar-brand" href="{{companyMainPageLink}}">{{companyName}}</a>
+            </span>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" ng-repeat="menuItem in menuItems">
+                <li ng-class="{ 'active' : menuItem.isActive }"><a href="{{menuItem.link}}"><span class="glyphicon glyphicon-{{menuItem.icon}}" aria-hidden="true"></span>&nbsp;{{menuItem.name}}</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- ========================== -->
+<!-- Fixed Nav Bar -->
+<!-- ========================== -->
+
+<!-- ========================== -->
+<!-- Carousal Starts here -->
+<!-- ========================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li ng-repeat="carousalItem in carousalItems" data-target="#myCarousel" data-slide-to="{{$index}}" ng-class="{'active' : $index === 0 }"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item" ng-repeat="carousalItem in carousalItems" ng-class="{'active': carousalItem.isActive }">
+            <img class="{{carousalItem.slideClass}}" src="{{carousalItem.slideImageSrc}}" alt="{{carousalItem.slideImageAltText}}">
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- ========================== -->
+<!-- Carousal Ends here -->
+<!-- ========================== -->
+
+
+<!-- ========================== -->
+<!-- 4 column section starts here -->
+<!-- ========================== -->
+<div class="container" align="center">
+    <!-- 4 columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-3" ng-repeat="service in services">
+            <img class="img-circle" src="{{service.serviceSmallImage}}" alt="Generic placeholder image" width="140" height="140">
+            <h2>{{service.serviceName}}</h2>
+            <p>{{service.serviceSmallDescription}}</p>
+            <p><a class="btn btn-default" href="{{service.serviceLink}}" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-3 -->
+    </div>
+</div>
+<!-- ========================== -->
+<!-- 4 column section ends here -->
+<!-- ========================== -->
+
+<!-- ========================== -->
+<!-- 3 column section starts here -->
+<!-- ========================== -->
+<div class="container marketing">
+
+
+    <!-- START THE FEATURETTES -->
+
+    <div ng-repeat="service in services">
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7" ng-class="{'col-md-push-5' : ($index % 2 === 1)}">
+                <h2 class="featurette-heading">{{service.serviceQuotationBold}} <span class="text-muted">{{service.serviceQuotationMuted}}</span></h2>
+                <p class="lead"></p>
+            </div>
+            <div class="col-md-5" ng-class="{'col-md-pull-7' : ($index % 2 === 1)}">
+                <img class="featurette-image img-responsive center-block" src="{{service.serviceQuotationImage}}" alt="Generic placeholder image">
+            </div>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+
+    <!-- ======= -->
+    <!-- FOOTER -->
+    <!-- ======= -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2015  {{companyName}}</p>
+    </footer>
+
+</div>
+
+<!-- Javascript files comes here - Keep them here in order to load page faster -->
+<script src="../tp/jquery-1.9.1.js"></script>
+<script src="../tp/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="../tp/angular-1.4.7/angular.min.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/controllers.js"></script>
+</body>
+</html>

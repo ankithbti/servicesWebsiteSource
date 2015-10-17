@@ -60,6 +60,12 @@ body {
     height: 500px;
 }
 
+.carousel-indicators li {
+    margin-left:5px;
+}
+.carousel-indicators li:active {
+    margin-left:5px;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
