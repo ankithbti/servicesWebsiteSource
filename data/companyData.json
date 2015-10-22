@@ -1,7 +1,7 @@
 {
-  "companyName": "ACompany",
+  "companyName": "Fidato",
 
-  "companyMainPageLink": "sampleHomePage.html",
+  "companyMainPageLink": "home.html",
 
   "services": [
     {
@@ -11,7 +11,7 @@
       "serviceQuotationBold": "Consulting Services!",
       "serviceQuotationMuted": "Advices are valuable & that's why we are here.",
       "serviceQuotationImage": "../images/consulting_500_1.png",
-      "serviceLink": "sampleConsultingPage.html"
+      "serviceLink": "consulting.html"
     },
     {
       "serviceName": "Technology",
@@ -20,7 +20,7 @@
       "serviceQuotationBold": "Technology Services!",
       "serviceQuotationMuted": "We beleive in Technology so, let's change the world together.",
       "serviceQuotationImage": "../images/technology_500.png",
-      "serviceLink": "sampleTechnologyPage.html"
+      "serviceLink": "technology.html"
     },
     {
       "serviceName": "Recruitment",
@@ -29,16 +29,16 @@
       "serviceQuotationBold": "Recruitment Services!",
       "serviceQuotationMuted": "Human is the best asset for a company & we help you to hire best for you.",
       "serviceQuotationImage": "../images/recruitment_500_1.png",
-      "serviceLink": "sampleRecruitmentPage.html"
+      "serviceLink": "recruitment.html"
     },
     {
-      "serviceName": "Technology",
+      "serviceName": "Finance",
       "serviceSmallDescription": "Small Description about Service",
       "serviceSmallImage": "../images/finance_small1.png",
       "serviceQuotationBold": "Financial Services!",
       "serviceQuotationMuted": "It is must for every business & we are best at this.",
       "serviceQuotationImage": "../images/finance_500_1.png",
-      "serviceLink": "sampleFinancePage.html"
+      "serviceLink": "finance.html"
     }
   ],
 
@@ -72,33 +72,48 @@
   "menuItems": [
     {
       "name": "Consulting",
-      "link": "sampleConsultingPage.html",
+      "link": "consulting.html",
       "icon": "user",
-      "isActive": false
+      "isActive": false,
+      "bannerImage": "../images/consulting_big_1.jpg",
+      "headingIcon": "user",
+      "headingText": "Consulting Services"
     },
     {
       "name": "Technology",
-      "link": "sampleTechnologyPage.html",
+      "link": "technology.html",
       "icon": "phone",
-      "isActive": false
+      "isActive": false,
+      "bannerImage": "../images/technology_big_1.jpg",
+      "headingIcon": "phone",
+      "headingText": "Technology Services"
     },
     {
       "name": "Recruitment",
-      "link": "sampleRecruitmentPage.html",
+      "link": "recruitment.html",
       "icon": "globe",
-      "isActive": false
+      "isActive": false,
+      "bannerImage": "../images/recruitment_big_3.jpg",
+      "headingIcon": "globe",
+      "headingText": "Recruitment Services"
     },
     {
       "name": "Finance",
-      "link": "sampleFinancePage.html",
+      "link": "finance.html",
       "icon": "piggy-bank",
-      "isActive": false
+      "isActive": false,
+      "bannerImage": "../images/finance_big_2.png",
+      "headingIcon": "piggy-bank",
+      "headingText": "Financial Services"
     },
     {
       "name": "Contact Us",
-      "link": "sampleContactUsPage.html",
+      "link": "contact.html",
       "icon": "envelope",
-      "isActive": false
+      "isActive": false,
+      "bannerImage": "../images/contactus_big_1.jpg",
+      "headingIcon": "pencil",
+      "headingText": "Write to Us"
     }
   ]
 }

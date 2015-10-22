@@ -4,6 +4,8 @@
 (function(){
 
 
-    var app = angular.module('webApp', ['webApp.controllers']);
+    var app = angular.module('webApp', ['mainPageController',
+        'conPageController', 'techPageController',
+        'recPageController', 'financePageController', 'contactPageController']);
 
 })();

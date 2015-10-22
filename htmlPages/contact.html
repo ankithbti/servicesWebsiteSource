@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="webApp" ng-controller="contactController as pc">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
@@ -17,41 +17,20 @@
     <!-- Local CSS files -->
     <link href="../css/style.css" rel="stylesheet">
 
-    <title>Contact Us Page</title>
+    <title>{{title}}</title>
 </head>
 <body role="document">
 
 <!-- ========================== -->
 <!-- Fixed navbar -->
 <!-- ========================== -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="sampleHomePage.html">ComanyName</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="sampleConsultingPage.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Consulting</a></li>
-                <li><a href="sampleTechnologyPage.html"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Technology</a></li>
-                <li><a href="sampleRecruitmentPage.html"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp;Recruitment</a></li>
-                <li><a href="sampleFinancePage.html"><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>&nbsp;Finance</a></li>
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Contact Us</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<top-navigation></top-navigation>
 <!-- ========================== -->
 <!-- Fixed Nav Bar -->
 <!-- ========================== -->
 
 <div class="row">
-    <img src="../images/contactus_big_1.jpg" width="100%"/>
+    <img src="{{bannerImage}}" width="100%"/>
 </div>
 
 
@@ -65,7 +44,7 @@
         <div class="col-sm-8">
 
             <div class="page-header">
-                <h1><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp; Write to Us</h1>
+                <h1><span class="glyphicon glyphicon-{{headingIcon}}" aria-hidden="true"></span>&nbsp;{{headingText}}</h1>
             </div>
 
             <form class="form-horizontal" method="post" action="#">
@@ -101,38 +80,30 @@
                 <h1><span class="glyphicon glyphicon-send" aria-hidden="true"></span>&nbsp;Email Us</h1>
             </div>
 
-            <p class="lead"><code>ankithbti007@gmail.com</code></p>
+            <p class="lead"><code>contactus@fidatoint.com</code></p>
 
-            <div class="page-header">
-                <h1><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;Call Us</h1>
-            </div>
-            <p class="lead"><code>+91-7507708282</code></p>
+            <!--<div class="page-header">-->
+                <!--<h1><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;Call Us</h1>-->
+            <!--</div>-->
+            <!--<p class="lead"><code>+91-7507708282</code></p>-->
 
         </div>
 
     </div>
-
-
 
     <hr class="featurette-divider">
 
     <!-- ======= -->
     <!-- FOOTER -->
     <!-- ======= -->
-    <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 CompanyName</p>
-    </footer>
-
+    <page-footer></page-footer>
 </div>
-<!-- ========================== -->
-<!-- 3 column section -->
-<!-- ========================== -->
 
 <!-- Javascript files comes here - Keep them here in order to load page faster -->
 <script src="../tp/jquery-1.9.1.js"></script>
 <script src="../tp/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-
-
+<script src="../tp/angular-1.4.7/angular.min.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/controllers.js"></script>
 </body>
 </html>

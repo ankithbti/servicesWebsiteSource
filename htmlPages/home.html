@@ -24,29 +24,7 @@
 <!-- ========================== -->
 <!-- Fixed navbar -->
 <!-- ========================== -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <span ng-show="isCompanyNameHighlight">
-                <a class="navbar-brand" href="{{companyMainPageLink}}" style="color:#ffffff">{{companyName}}</a>
-            </span>
-            <span ng-show="!isCompanyNameHighlight">
-                <a class="navbar-brand" href="{{companyMainPageLink}}">{{companyName}}</a>
-            </span>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav" ng-repeat="menuItem in menuItems">
-                <li ng-class="{ 'active' : menuItem.isActive }"><a href="{{menuItem.link}}"><span class="glyphicon glyphicon-{{menuItem.icon}}" aria-hidden="true"></span>&nbsp;{{menuItem.name}}</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<top-navigation></top-navigation>
 <!-- ========================== -->
 <!-- Fixed Nav Bar -->
 <!-- ========================== -->
@@ -54,25 +32,7 @@
 <!-- ========================== -->
 <!-- Carousal Starts here -->
 <!-- ========================== -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li ng-repeat="carousalItem in carousalItems" data-target="#myCarousel" data-slide-to="{{$index}}" ng-class="{'active' : $index === 0 }"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item" ng-repeat="carousalItem in carousalItems" ng-class="{'active': carousalItem.isActive }">
-            <img class="{{carousalItem.slideClass}}" src="{{carousalItem.slideImageSrc}}" alt="{{carousalItem.slideImageAltText}}">
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+<carousal></carousal>
 <!-- ========================== -->
 <!-- Carousal Ends here -->
 <!-- ========================== -->
@@ -125,11 +85,7 @@
     <!-- ======= -->
     <!-- FOOTER -->
     <!-- ======= -->
-    <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015  {{companyName}}</p>
-    </footer>
-
+    <page-footer></page-footer>
 </div>
 
 <!-- Javascript files comes here - Keep them here in order to load page faster -->

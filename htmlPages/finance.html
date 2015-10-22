@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="webApp" ng-controller="fpController as pc">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- CSS Files -->
+    <!-- Bootstrap CSS files -->
+    <link href="../tp/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../tp/bootstrap-3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Local CSS files -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <title>{{title}}</title>
+</head>
+<body role="document">
+
+<!-- ========================== -->
+<!-- Fixed navbar -->
+<!-- ========================== -->
+<top-navigation></top-navigation>
+<!-- ========================== -->
+<!-- Fixed Nav Bar -->
+<!-- ========================== -->
+
+<div class="row">
+    <img src="{{bannerImage}}" width="100%"/>
+</div>
+
+
+<!-- ========================== -->
+<!-- 3 column section starts here -->
+<!-- ========================== -->
+<div class="container marketing">
+
+    <div class="page-header">
+        <h1><span class="glyphicon glyphicon-{{headingIcon}}" aria-hidden="true"></span>&nbsp;{{headingText}}</h1>
+    </div>
+
+    <p class="lead">Paragraph about the topic will come here.</p>
+
+    <hr class="featurette-divider">
+
+    <!-- ======= -->
+    <!-- FOOTER -->
+    <!-- ======= -->
+    <page-footer></page-footer>
+</div>
+
+<!-- Javascript files comes here - Keep them here in order to load page faster -->
+<script src="../tp/jquery-1.9.1.js"></script>
+<script src="../tp/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="../tp/angular-1.4.7/angular.min.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/controllers.js"></script>
+</body>
+</html>
